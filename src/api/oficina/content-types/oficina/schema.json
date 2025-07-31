@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "oficinas",
+  "info": {
+    "singularName": "oficina",
+    "pluralName": "oficinas",
+    "displayName": "oficina"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "bathroom": {
+      "type": "boolean",
+      "required": true,
+      "default": true
+    },
+    "piso": {
+      "type": "string",
+      "default": "1",
+      "required": true
+    },
+    "plano": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "area": {
+      "type": "string",
+      "default": " m²",
+      "required": true
+    },
+    "proyecto": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::proyecto.proyecto",
+      "inversedBy": "oficinas"
+    }
+  }
+}

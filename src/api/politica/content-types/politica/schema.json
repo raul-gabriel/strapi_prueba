@@ -1,0 +1,31 @@
+{
+  "kind": "singleType",
+  "collectionName": "politicas",
+  "info": {
+    "singularName": "politica",
+    "pluralName": "politicas",
+    "displayName": "politica"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "politica_de_privacidad": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      },
+      "required": true
+    },
+    "terminos_y_condiciones": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "required": true,
+      "options": {
+        "preset": "defaultHtml"
+      }
+    }
+  }
+}

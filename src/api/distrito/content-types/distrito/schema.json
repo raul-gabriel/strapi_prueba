@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "distritos",
+  "info": {
+    "singularName": "distrito",
+    "pluralName": "distritos",
+    "displayName": "Distrito"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "proyectos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::proyecto.proyecto",
+      "private": true,
+      "mappedBy": "distrito"
+    }
+  }
+}

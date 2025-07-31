@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "departamentos",
+  "info": {
+    "singularName": "departamento",
+    "pluralName": "departamentos",
+    "displayName": "departamento"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "proyecto": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::proyecto.proyecto",
+      "inversedBy": "departamentos"
+    },
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "piso_ubicacion": {
+      "type": "string",
+      "required": true
+    },
+    "area": {
+      "type": "string",
+      "default": " m²",
+      "required": true
+    },
+    "nro_dormitorios": {
+      "type": "string",
+      "required": true
+    },
+    "nro_comedores": {
+      "type": "string",
+      "required": true
+    },
+    "nro_lavanderias": {
+      "type": "string",
+      "required": true
+    },
+    "nro_bathrooms": {
+      "type": "string",
+      "required": true
+    },
+    "plano": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

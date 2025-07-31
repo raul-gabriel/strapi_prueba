@@ -1,0 +1,135 @@
+{
+  "kind": "collectionType",
+  "collectionName": "proyectos",
+  "info": {
+    "singularName": "proyecto",
+    "pluralName": "proyectos",
+    "displayName": "proyecto"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "estado": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "Lanzamiento",
+        "Preventa",
+        "Próximamente",
+        "Entregado",
+        "En construcción",
+        "Entrega inmediata"
+      ]
+    },
+    "year_ejecucion": {
+      "type": "integer",
+      "required": true,
+      "default": 2025,
+      "min": 2000,
+      "max": 2050
+    },
+    "imagen": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "distrito": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::distrito.distrito",
+      "inversedBy": "proyectos"
+    },
+    "direccion": {
+      "type": "string",
+      "required": true
+    },
+    "pisos": {
+      "type": "string",
+      "required": true
+    },
+    "dormitorios": {
+      "type": "string",
+      "required": true
+    },
+    "area": {
+      "type": "string",
+      "default": " m²",
+      "required": true
+    },
+    "url_video": {
+      "type": "string"
+    },
+    "brochure": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "files"
+      ]
+    },
+    "url_mapa": {
+      "type": "string",
+      "required": false
+    },
+    "url_google_map": {
+      "type": "string"
+    },
+    "url_waze": {
+      "type": "string"
+    },
+    "galeria_principal": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "galeria_secundaria": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "nombre",
+      "required": true
+    },
+    "descripcion": {
+      "type": "text",
+      "required": true
+    },
+    "departamentos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::departamento.departamento",
+      "mappedBy": "proyecto"
+    },
+    "oficinas": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::oficina.oficina",
+      "mappedBy": "proyecto"
+    },
+    "meta_title": {
+      "type": "string"
+    },
+    "meta_description": {
+      "type": "text"
+    },
+    "meta_keywords": {
+      "type": "string"
+    }
+  }
+}

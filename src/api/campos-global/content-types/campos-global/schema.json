@@ -1,0 +1,63 @@
+{
+  "kind": "singleType",
+  "collectionName": "campos_globales",
+  "info": {
+    "singularName": "campos-global",
+    "pluralName": "campos-globales",
+    "displayName": "campos_global"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "spot_blog": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "video_blog": {
+      "type": "string",
+      "required": true
+    },
+    "meta_title_proyecto_en_venta": {
+      "type": "string"
+    },
+    "meta_description_proyeccto_en_venta": {
+      "type": "text"
+    },
+    "meta_keywords_proyecto_en_venta": {
+      "type": "string"
+    },
+    "meta_title_proyectos_entregados": {
+      "type": "string"
+    },
+    "meta_description_proyeccto_entregados": {
+      "type": "text"
+    },
+    "meta_keywords_proyectos_entregados": {
+      "type": "string"
+    },
+    "meta_title_preguntas_frecuentes": {
+      "type": "string"
+    },
+    "meta_description_preguntas_frecuentes": {
+      "type": "text"
+    },
+    "meta_keywords_preguntas_frecuentes": {
+      "type": "string"
+    },
+    "meta_title_blogs": {
+      "type": "string"
+    },
+    "meta_description_blogs": {
+      "type": "text"
+    },
+    "meta_keywords_blog": {
+      "type": "string"
+    }
+  }
+}

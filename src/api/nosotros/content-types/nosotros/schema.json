@@ -1,0 +1,62 @@
+{
+  "kind": "singleType",
+  "collectionName": "nosotross",
+  "info": {
+    "singularName": "nosotros",
+    "pluralName": "nosotross",
+    "displayName": " nosotros"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "foto": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "sobre_nosotros": {
+      "type": "text",
+      "required": true
+    },
+    "mision": {
+      "type": "text",
+      "required": true
+    },
+    "vision": {
+      "type": "text",
+      "required": true
+    },
+    "logos": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "imagen_experiencia": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "meta_title": {
+      "type": "string"
+    },
+    "meta_description": {
+      "type": "text"
+    },
+    "meta_keywords": {
+      "type": "string"
+    }
+  }
+}
